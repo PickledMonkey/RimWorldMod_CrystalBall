@@ -25,6 +25,10 @@ namespace CrystalBall
 
         private Dictionary<string, int> specialIncidents = new Dictionary<string, int>();
 
+        public static bool warningsActivated = false;
+
+
+
         public WarnedIncidentQueueWorldComponent(World world) : base(world)
         {
             specialIncidents.Add("IncidentWorker_CaravanDemand", 0);
@@ -40,6 +44,7 @@ namespace CrystalBall
         {
             Scribe_Deep.Look<IncidentQueue>(ref this.warnedIncidents, "warnedIncidents", Array.Empty<object>());
             Scribe_Collections.Look<QueuedIncident>(ref this.knownIncidents, "knownIncidents", LookMode.Deep, Array.Empty<object>());
+            Scribe_Values.Look<bool>(ref warningsActivated, "warningsActivated", false, false);
         }
 
         private bool AddKnownIncident(QueuedIncident qi)
@@ -82,16 +87,16 @@ namespace CrystalBall
 
             int tickDelay = Verse.Rand.RangeInclusive(settings.medianDelayTime - settings.delayTimeFudgeWindow, settings.medianDelayTime + settings.delayTimeFudgeWindow);
 
-#if DEBUG
-            Log.Message(String.Format("Adding incident TickDelay={0}", tickDelay));
-#endif
-
-            if(tickDelay < 0)
+            if((tickDelay < 0) || (!warningsActivated))
             {
                 tickDelay = 0;
             }
 
-            if(specialIncidents.ContainsKey(fi.def.workerClass.ToString()))
+#if DEBUG
+            Log.Message(String.Format("Adding incident TickDelay={0}", tickDelay));
+#endif
+
+            if (specialIncidents.ContainsKey(fi.def.workerClass.ToString()))
             {
                 specialIncidents.TryGetValue(fi.def.workerClass.ToString(), tickDelay);
             }
@@ -142,6 +147,7 @@ namespace CrystalBall
 #if DEBUG
             Log.Message(String.Format("Predicting with strength={0}, num={1}", predictionStrength, maxNumPredictions));
 #endif
+
 
             List<QueuedIncident> incidentList;
             GetEventsInQueue(out incidentList);

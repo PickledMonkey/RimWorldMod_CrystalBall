@@ -19,7 +19,7 @@ namespace Crystalball
 
         private float accumulatedScryAbility = 0.0f;
         private float accumulatedPredictionCount = 0.0f;
-
+        
         public override void ExposeData()
         {
             base.ExposeData();
@@ -40,6 +40,11 @@ namespace Crystalball
         public void PerformScryWork(float scryingAbility, float predictionCount)
         {
             CrystalBallSettings settings = CrystalBallStatic.currMod.GetSettings<CrystalBallSettings>();
+
+            if(!WarnedIncidentQueueWorldComponent.warningsActivated)
+            {
+                WarnedIncidentQueueWorldComponent.warningsActivated = true; //One time flag, so incidents behave as normal if the crystal ball is never used.
+            }
 
             if (recharged)
             {
