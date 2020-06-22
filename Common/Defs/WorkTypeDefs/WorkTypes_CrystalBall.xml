@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <WorkTypeDef>
+    <defName>WorkTypeDef_Scry</defName>
+    <labelShort>Scry</labelShort>
+    <pawnLabel>Scryer</pawnLabel>
+    <gerundLabel>scrying</gerundLabel>
+    <description>Scry crystal balls to predict the future.</description>
+    <verb>Scry</verb>
+    <naturalPriority>110</naturalPriority>
+    <alwaysStartActive>false</alwaysStartActive>
+    <requireCapableColonist>true</requireCapableColonist>
+    <workTags>
+      <li>Intellectual</li>
+      <li>Commoner</li>
+      <li>AllWork</li>
+    </workTags>
+  </WorkTypeDef>
+</Defs>

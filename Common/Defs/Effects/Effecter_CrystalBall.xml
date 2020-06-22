@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <EffecterDef>
+    <defName>EffecterDef_Scry</defName>
+    <children>
+<!--     <li>
+      <subEffecterClass>SubEffecter_Sustainer</subEffecterClass>
+      <soundDef>Interact_Research</soundDef>
+    </li> -->
+    <li>
+      <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+      <burstCount>1~2</burstCount>
+      <positionRadius>0.2</positionRadius>
+      <scale>0.1~0.3</scale>
+      <ticksBetweenMotes>150</ticksBetweenMotes>
+      <positionLerpFactor>1</positionLerpFactor>
+      <moteDef>Mote_AirPuff</moteDef>
+    </li>
+    </children>
+  </EffecterDef>
+</Defs>

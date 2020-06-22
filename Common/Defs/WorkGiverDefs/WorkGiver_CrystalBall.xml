@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ============= Scrying ============= -->
+  
+  <WorkGiverDef>
+    <defName>WorkGiverDef_ScryCrystallBall</defName>
+    <label>use crystal balls to predict the future</label>
+    <giverClass>CrystalBall.WorkGiver_CrystalBall</giverClass>
+    <workType>WorkTypeDef_Scry</workType>
+    <verb>scry</verb>
+    <gerund>scrying at</gerund>
+    <priorityInType>100</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+
+</Defs>
