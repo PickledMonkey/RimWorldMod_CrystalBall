@@ -30,6 +30,12 @@ Compatibility:
 - Full compatibility with storyteller mods
 - Will probably not work well with mods that mess with how incidents themselves are triggered
 
+
+Code Available Here:
+https://github.com/PickledMonkey/RimWorldMod_CrystalBall
+
+Feel free to modify or use however you want, but just give me a shout-out if you fork it and add onto it or something.
+
 	</description>
 	<url>https://steamcommunity.com/id/PickledMonkey/myworkshopfiles/?appid=294100</url>
 	<modDependencies>
