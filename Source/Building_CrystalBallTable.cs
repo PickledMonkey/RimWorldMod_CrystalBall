@@ -43,6 +43,9 @@ namespace Crystalball
 
             if(!WarnedIncidentQueueWorldComponent.warningsActivated)
             {
+#if DEBUG
+                Log.Message("Activating the prediction queue.");
+#endif
                 WarnedIncidentQueueWorldComponent.warningsActivated = true; //One time flag, so incidents behave as normal if the crystal ball is never used.
             }
 
