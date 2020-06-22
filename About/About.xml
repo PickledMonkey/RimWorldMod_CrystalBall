@@ -5,7 +5,21 @@
 	<supportedVersions>
 		<li>1.1</li>
 	</supportedVersions>
-	<description>Creates a crystal ball that pawns can use to scry into the future to prepare for future incidents</description>
+	<description>Creates a crystal ball that pawns can use to scry into the future to prepare for future incidents
+
+		To Use: 
+		1. Create a Crystal Ball Table from the Production tab. The ball is made out of Jade, so you will need that resource.
+		2. Assign a colonist to do the "Scry" work. This work is influenced by Intellectual and their Psychic Sensitivity
+		3. Colonists will use the crystal ball to peer into the future and see what events lie in store
+
+		Some Technical Details:
+		- This mod is only able to know what events will happen in the future because it essentially delays them by a random interval
+		- This means it might have compatibility issues with other mods that mess with how incidents are triggered
+		- Because the delays are random by default (can configure it differently), it means you could have 2 bad things happen on the same day (which seems like a good balance to me since you can know the 2 things are happening ahead of time)
+		- It does not affect Storytellers. The mod will tell the Storyteller it's on its normal schedule, so it will behave normally.
+		- There are mod settings to adjust the incident delays as well as how frequently you can use the crystal ball
+
+	</description>
 	<url>https://steamcommunity.com/id/PickledMonkey/myworkshopfiles/?appid=294100</url>
 	<modDependencies>
 	    <li>

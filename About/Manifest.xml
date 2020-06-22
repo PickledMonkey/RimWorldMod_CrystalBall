@@ -6,6 +6,6 @@
   <incompatibleWith />
   <loadBefore />
   <loadAfter />
-  <manifestUri>https://raw.githubusercontent.com/</manifestUri>
-  <downloadUri>https://github.com/</downloadUri>
+  <manifestUri>https://raw.githubusercontent.com/PickledMonkey/RimWorldMod_CrystalBall/master/About/Manifest.xml</manifestUri>
+  <downloadUri>https://github.com/PickledMonkey/RimWorldMod_CrystalBall/releases/download/v1.0/Crystalball.dll</downloadUri>
 </Manifest>
