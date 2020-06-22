@@ -19,12 +19,16 @@ To Use:
 
 Some Technical Details:
 - This mod is only able to know what events will happen in the future because it essentially delays them by a random interval
-- This means it might have compatibility issues with other mods that mess with how incidents are triggered
 - The incident changes will only start once you've created and used a crystal ball for the first time
 - Because the delays are random by default (can configure it differently), it means you could have 2 bad things happen on the same day (which seems like a good balance to me since you can know the 2 things are happening ahead of time)
 - It does not affect Storytellers. The mod will tell the Storyteller it's on its normal schedule, so it will behave normally.
 - There are mod settings to adjust the incident delays as well as how frequently you can use the crystal ball
 - Okay to add an existing save. If you remove it, missing stuff errors will be thrown, but it probably won't break anything.
+
+Compatibility:
+- Full compatibility with any mod that adds new incidents.
+- Full compatibility with storyteller mods
+- Will probably not work well with mods that mess with how incidents themselves are triggered
 
 	</description>
 	<url>https://steamcommunity.com/id/PickledMonkey/myworkshopfiles/?appid=294100</url>
